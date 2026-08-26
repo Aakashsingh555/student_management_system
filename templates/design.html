@@ -12,6 +12,268 @@
 
 <body class="bg-slate-50">
 
+    <div class="flex min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="w-64 bg-blue-900 text-white">
+
+            <!-- Logo / Title -->
+            <div class="p-6 border-b border-blue-800">
+                <h1 class="text-xl font-bold">
+                    Student Management
+                </h1>
+                <p class="text-sm text-blue-200 mt-1">
+                    Admin Panel
+                </p>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="p-4">
+
+                <a href="#" class="block px-4 py-3 rounded-lg bg-blue-800 mb-2">
+                    Dashboard
+                </a>
+
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    Students
+                </a>
+
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    Teachers
+                </a>
+
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    Courses
+                </a>
+
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    Attendance
+                </a>
+
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    Results
+                </a>
+
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800">
+                    Logout
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main area -->
+        <div class="flex-1">
+
+            <!-- Top navbar -->
+            <header class="h-16 bg-white border-b flex items-center justify-between px-6">
+
+                <h2 class="text-xl font-semibold text-slate-800">
+                    Dashboard
+                </h2>
+
+                <div class="flex items-center gap-4">
+
+                    <span class="text-sm text-slate-600">
+                        Welcome, Admin
+                    </span>
+
+                    <div class="w-9 h-9 rounded-full bg-blue-900 text-white flex items-center justify-center">
+                        A
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Page content -->
+            <main class="p-6">
+
+                <!-- Page heading -->
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold text-slate-800">
+                        Dashboard Overview
+                    </h2>
+
+                    <p class="text-slate-500 mt-1">
+                        Here's what's happening in your university.
+                    </p>
+                </div>
+
+
+                <!-- Statistics Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <!-- Students -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border">
+                        <p class="text-sm text-slate-500">
+                            Total Students
+                        </p>
+
+                        <h3 class="text-3xl font-bold text-slate-800 mt-2">
+                            250
+                        </h3>
+
+                        <p class="text-sm text-green-600 mt-2">
+                            +12 this month
+                        </p>
+                    </div>
+
+
+                    <!-- Teachers -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border">
+                        <p class="text-sm text-slate-500">
+                            Total Teachers
+                        </p>
+
+                        <h3 class="text-3xl font-bold text-slate-800 mt-2">
+                            18
+                        </h3>
+
+                        <p class="text-sm text-slate-500 mt-2">
+                            Active teachers
+                        </p>
+                    </div>
+
+
+                    <!-- Courses -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border">
+                        <p class="text-sm text-slate-500">
+                            Total Courses
+                        </p>
+
+                        <h3 class="text-3xl font-bold text-slate-800 mt-2">
+                            12
+                        </h3>
+
+                        <p class="text-sm text-slate-500 mt-2">
+                            Available courses
+                        </p>
+                    </div>
+
+
+                    <!-- Attendance -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border">
+                        <p class="text-sm text-slate-500">
+                            Attendance
+                        </p>
+
+                        <h3 class="text-3xl font-bold text-slate-800 mt-2">
+                            92%
+                        </h3>
+
+                        <p class="text-sm text-green-600 mt-2">
+                            Overall attendance
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Recent Students -->
+                <div class="bg-white rounded-xl shadow-sm border mt-8">
+
+                    <div class="p-6 border-b">
+                        <h3 class="text-lg font-semibold text-slate-800">
+                            Recent Students
+                        </h3>
+
+                        <p class="text-sm text-slate-500 mt-1">
+                            Recently registered students
+                        </p>
+                    </div>
+
+
+                    <div class="overflow-x-auto">
+
+                        <table class="w-full text-left">
+
+                            <thead class="bg-slate-50 text-sm text-slate-500">
+
+                                <tr>
+                                    <th class="px-6 py-4">Student ID</th>
+                                    <th class="px-6 py-4">Name</th>
+                                    <th class="px-6 py-4">Course</th>
+                                    <th class="px-6 py-4">Status</th>
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody class="divide-y">
+
+                                <tr>
+                                    <td class="px-6 py-4">STU001</td>
+
+                                    <td class="px-6 py-4 font-medium">
+                                        Raj Shrestha
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        BSc CSIT
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">
+                                            Active
+                                        </span>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td class="px-6 py-4">STU002</td>
+
+                                    <td class="px-6 py-4 font-medium">
+                                        Gaurav Gurung
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        BCA
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">
+                                            Active
+                                        </span>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td class="px-6 py-4">STU003</td>
+
+                                    <td class="px-6 py-4 font-medium">
+                                        Kundan Karak
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        BIM
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full">
+                                            Pending
+                                        </span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
 </body>
 
 </html>
