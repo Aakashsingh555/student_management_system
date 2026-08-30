@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50">
+
+    <div class="flex min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="w-64 bg-blue-900 text-white">
+
+            <!-- Logo / Title -->
+            <div class="p-6 border-b border-blue-800">
+                <h1 class="text-xl font-bold">
+                    Student Management
+                </h1>
+                <p class="text-sm text-blue-200 mt-1">
+                    Admin Panel
+                </p>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="p-4 border-b border-blue-800">
+
+                <a href="#" class="block px-4 py-3 rounded-lg bg-blue-800 mb-2">
+                  <i class="fa fa-home mr-1" style="font-size:20px" aria-hidden="true"></i>  Dashboard
+                </a>
+
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    <i class="fa fa-users mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    Students
+                </a>
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    <i class="fa fa-graduation-cap mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    Academics
+                </a>
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    <i class="fa fa-calendar-check-o mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    Attendance
+                </a>
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    <i class="fa fa-credit-card mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    Fees
+                </a>
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    <i class="fa fa-money mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    Payments
+                </a>
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    <i class="fa fa-bullhorn mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    Notices
+                </a>
+
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    <i class="fa fa-bar-chart mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    Reports
+                </a>
+
+                </nav>
+                <nav class="p-4">
+
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                    <i class="fa fa-cog mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    Settings
+                </a>
+
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800">
+                    <i class="fa fa-sign-in mr-1 " style="font-size:20px" aria-hidden="true"></i>
+                    Logout
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main area -->
+        <div class="flex-1">
+
+            <!-- Top navbar -->
+<header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-6">
+
+    <!-- Left side -->
+    <div class="flex items-center">
+        <h2 class="text-xl font-semibold text-slate-800">
+            Dashboard
+        </h2>
+    </div>
+
+
+    <!-- Right side -->
+    <div class="flex items-center gap-5">
+
+        <!-- Search -->
+        <div class="relative pl-4 pr-4 py-1 text-sm border border-slate-200 rounded-lg
+            focus-within:ring-1 focus-within:ring-blue-500">
+
+    <i class="fa fa-search text-gray-500 text-lg" aria-hidden="true"></i>
+
+    <input
+        type="text"
+        placeholder="Search..."
+        class="w-64 pl-4 pr-4 py-2 text-sm border-none outline-none"
+    >
+</div>
+
+
+        <!-- Notification -->
+        <button
+            class="relative p-2 text-slate-500 hover:text-blue-900 hover:bg-slate-100 rounded-lg">
+
+            <i class="fa fa-bell" aria-hidden="true"></i>
+
+            <!-- Notification badge -->
+            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+
+        </button>
+
+
+        <!-- Divider -->
+        <div class="h-8 w-px bg-slate-200"></div>
+
+
+        <!-- User -->
+        <div class="flex items-center gap-3">
+
+            <div class="text-right">
+                <p class="text-sm font-medium text-slate-800">
+                    Admin
+                </p>
+
+                <p class="text-xs text-slate-500">
+                    Administrator
+                </p>
+            </div>
+
+            <div class="w-9 h-9 rounded-full bg-blue-900 text-white 
+                        flex items-center justify-center font-medium">
+                A
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+      
+            <!-- Page content -->
+            <main class="p-6">
+              {% block content %}
+              {% endblock %}
+            </main>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
