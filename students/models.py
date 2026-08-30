@@ -6,6 +6,7 @@ class Student(models.Model):
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=15)
     course = models.CharField(max_length=100)
+    address = models.TextField()
 
     def __str__(self):
         return self.name
