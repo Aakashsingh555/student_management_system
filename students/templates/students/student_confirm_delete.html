@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block page_title %}Delete Student{% endblock %}
+
 {% block content %}
 
 <div class="mb-6">
@@ -7,79 +9,82 @@
         Delete Student
     </h2>
 
-    <p class="text-slate-500 mt-1">
-        Remove a student from the system.
-    </p>
+```
+<p class="text-slate-500 mt-1">
+    Remove a student from the system.
+</p>
+```
+
 </div>
 
-
 <!-- Delete Confirmation Card -->
+
 <div class="bg-white rounded-xl border shadow-sm max-w-xl">
 
-    <div class="p-6">
+```
+<div class="p-6">
 
-        <!-- Warning -->
-        <div class="flex items-start gap-4">
+    <!-- Warning -->
+    <div class="flex items-start gap-4">
 
-            <div class="w-11 h-11 rounded-full bg-red-100 text-red-600
-                        flex items-center justify-center flex-shrink-0">
+        <div class="w-11 h-11 rounded-full bg-red-100 text-red-600
+                    flex items-center justify-center flex-shrink-0">
 
-                <i class="fa fa-trash text-lg" aria-hidden="true"></i>
-
-            </div>
-
-            <div>
-                <h3 class="text-lg font-semibold text-slate-800">
-                    Delete Student?
-                </h3>
-
-                <p class="text-slate-500 mt-1">
-                    Are you sure you want to delete
-                    <span class="font-medium text-slate-800">
-                        "{{ student.name }}"
-                    </span>?
-                </p>
-
-                <p class="text-sm text-red-500 mt-2">
-                    This action cannot be undone.
-                </p>
-            </div>
+            <i class="fa fa-trash text-lg" aria-hidden="true"></i>
 
         </div>
 
+        <div>
+            <h3 class="text-lg font-semibold text-slate-800">
+                Delete Student?
+            </h3>
 
-        <!-- Buttons -->
-        <div class="flex justify-end gap-3 mt-8 pt-6 border-t">
+            <p class="text-slate-500 mt-1">
+                Are you sure you want to delete
+                <span class="font-medium text-slate-800">
+                    "{{ student.name }}"
+                </span>?
+            </p>
 
-            <a
-                href="{% url 'student_list' %}"
-                class="px-4 py-2.5 border border-slate-200 rounded-lg
-                       text-slate-600 hover:bg-slate-50 transition">
-
-                Cancel
-
-            </a>
-
-
-            <form method="post">
-
-                {% csrf_token %}
-
-                <button
-                    type="submit"
-                    class="px-5 py-2.5 bg-red-600 text-white rounded-lg
-                           hover:bg-red-700 transition">
-
-                    <i class="fa fa-trash mr-2" aria-hidden="true"></i>
-                    Yes, Delete
-
-                </button>
-
-            </form>
-
+            <p class="text-sm text-red-500 mt-2">
+                This action cannot be undone.
+            </p>
         </div>
 
     </div>
+
+    <!-- Buttons -->
+    <div class="flex justify-end gap-3 mt-8 pt-6 border-t">
+
+        <a
+            href="{% url 'student_list' %}"
+            class="px-4 py-2.5 border border-slate-200 rounded-lg
+                   text-slate-600 hover:bg-slate-50 transition">
+
+            Cancel
+
+        </a>
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            <button
+                type="submit"
+                class="px-5 py-2.5 bg-red-600 text-white rounded-lg
+                       hover:bg-red-700 transition">
+
+                <i class="fa fa-trash mr-2" aria-hidden="true"></i>
+                Yes, Delete
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+```
 
 </div>
 

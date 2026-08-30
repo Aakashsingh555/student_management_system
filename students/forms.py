@@ -28,4 +28,5 @@ class StudentForm(forms.ModelForm):
             'course': forms.Select(attrs={
                 'class': 'w-full px-4 py-3 border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
             }),
+            
         }
