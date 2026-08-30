@@ -31,11 +31,24 @@
             <!-- Navigation -->
             <nav class="p-4 border-b border-blue-800">
 
-                <a href="#" class="block px-4 py-3 rounded-lg bg-blue-800 mb-2">
-                  <i class="fa fa-home mr-1" style="font-size:20px" aria-hidden="true"></i>  Dashboard
+               <a href="{% url 'dashboard' %}"
+                   class="block px-4 py-3 rounded-lg mb-2
+                   {% if request.resolver_match.url_name == 'dashboard' %}
+                       bg-blue-800
+                   {% else %}
+                       hover:bg-blue-800
+                   {% endif %}">
+                    <i class="fa fa-home mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    Dashboard
                 </a>
 
-                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+                <a href="{% url 'student_list' %}"
+                   class="block px-4 py-3 rounded-lg mb-2
+                   {% if request.resolver_match.url_name == 'student_list' %}
+                       bg-blue-800
+                   {% else %}
+                       hover:bg-blue-800
+                   {% endif %}">
                     <i class="fa fa-users mr-1" style="font-size:20px" aria-hidden="true"></i>
                     Students
                 </a>

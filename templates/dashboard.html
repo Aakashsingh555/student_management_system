@@ -1,180 +1,99 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
+<!-- Page heading -->
+<div class="mb-6">
+  <h2 class="text-2xl font-bold text-slate-800">Dashboard Overview</h2>
 
-{% block content %}
-   <!-- Page heading -->
-                <div class="mb-6">
-                    <h2 class="text-2xl font-bold text-slate-800">
-                        Dashboard Overview
-                    </h2>
+  <p class="text-slate-500 mt-1">Here's what's happening in your university.</p>
+</div>
 
-                    <p class="text-slate-500 mt-1">
-                        Here's what's happening in your university.
-                    </p>
-                </div>
+<!-- Statistics Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+  <!-- Students -->
+  <div class="bg-white p-6 rounded-xl shadow-sm border">
+    <p class="text-sm text-slate-500">Total Students</p>
 
+    <h3 class="text-3xl font-bold text-slate-800 mt-2">250</h3>
 
-                <!-- Statistics Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <p class="text-sm text-green-600 mt-2">+12 this month</p>
+  </div>
 
-                    <!-- Students -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm border">
-                        <p class="text-sm text-slate-500">
-                            Total Students
-                        </p>
+  <!-- Teachers -->
+  <div class="bg-white p-6 rounded-xl shadow-sm border">
+    <p class="text-sm text-slate-500">Total Teachers</p>
 
-                        <h3 class="text-3xl font-bold text-slate-800 mt-2">
-                            250
-                        </h3>
+    <h3 class="text-3xl font-bold text-slate-800 mt-2">18</h3>
 
-                        <p class="text-sm text-green-600 mt-2">
-                            +12 this month
-                        </p>
-                    </div>
+    <p class="text-sm text-slate-500 mt-2">Active teachers</p>
+  </div>
 
+  <!-- Courses -->
+  <div class="bg-white p-6 rounded-xl shadow-sm border">
+    <p class="text-sm text-slate-500">Total Courses</p>
 
-                    <!-- Teachers -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm border">
-                        <p class="text-sm text-slate-500">
-                            Total Teachers
-                        </p>
+    <h3 class="text-3xl font-bold text-slate-800 mt-2">12</h3>
 
-                        <h3 class="text-3xl font-bold text-slate-800 mt-2">
-                            18
-                        </h3>
+    <p class="text-sm text-slate-500 mt-2">Available courses</p>
+  </div>
 
-                        <p class="text-sm text-slate-500 mt-2">
-                            Active teachers
-                        </p>
-                    </div>
+  <!-- Attendance -->
+  <div class="bg-white p-6 rounded-xl shadow-sm border">
+    <p class="text-sm text-slate-500">Attendance</p>
 
+    <h3 class="text-3xl font-bold text-slate-800 mt-2">92%</h3>
 
-                    <!-- Courses -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm border">
-                        <p class="text-sm text-slate-500">
-                            Total Courses
-                        </p>
+    <p class="text-sm text-green-600 mt-2">Overall attendance</p>
+  </div>
+</div>
 
-                        <h3 class="text-3xl font-bold text-slate-800 mt-2">
-                            12
-                        </h3>
+<!-- Recent Students -->
+<div class="bg-white rounded-xl shadow-sm border mt-8">
+  <div class="p-6 border-b">
+    <h3 class="text-lg font-semibold text-slate-800">Recent Students</h3>
 
-                        <p class="text-sm text-slate-500 mt-2">
-                            Available courses
-                        </p>
-                    </div>
+    <p class="text-sm text-slate-500 mt-1">Recently registered students</p>
+  </div>
 
+  <div class="overflow-x-auto">
+    <table class="w-full text-left">
+      <thead class="bg-slate-50 text-sm text-slate-500">
+        <tr>
+          <th class="px-6 py-4">Student ID</th>
+          <th class="px-6 py-4">Name</th>
+          <th class="px-6 py-4">Course</th>
+          <th class="px-6 py-4">Status</th>
+        </tr>
+      </thead>
 
-                    <!-- Attendance -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm border">
-                        <p class="text-sm text-slate-500">
-                            Attendance
-                        </p>
+      <tbody class="divide-y">
+        {% for student in students %}
 
-                        <h3 class="text-3xl font-bold text-slate-800 mt-2">
-                            92%
-                        </h3>
+        <tr class="hover:bg-slate-50 transition">
+          <td class="px-6 py-4">#{{ student.id }}</td>
 
-                        <p class="text-sm text-green-600 mt-2">
-                            Overall attendance
-                        </p>
-                    </div>
+          <td class="px-6 py-4 font-medium">{{ student.name }}</td>
 
-                </div>
+          <td class="px-6 py-4">{{ student.course }}</td>
 
+          <td class="px-6 py-4">
+            <span
+              class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full"
+            >
+              Active
+            </span>
+          </td>
+        </tr>
 
-                <!-- Recent Students -->
-                <div class="bg-white rounded-xl shadow-sm border mt-8">
+        {% empty %}
 
-                    <div class="p-6 border-b">
-                        <h3 class="text-lg font-semibold text-slate-800">
-                            Recent Students
-                        </h3>
+        <tr>
+          <td colspan="4" class="px-6 py-8 text-center text-slate-500">
+            No students found.
+          </td>
+        </tr>
 
-                        <p class="text-sm text-slate-500 mt-1">
-                            Recently registered students
-                        </p>
-                    </div>
-
-
-                    <div class="overflow-x-auto">
-
-                        <table class="w-full text-left">
-
-                            <thead class="bg-slate-50 text-sm text-slate-500">
-
-                                <tr>
-                                    <th class="px-6 py-4">Student ID</th>
-                                    <th class="px-6 py-4">Name</th>
-                                    <th class="px-6 py-4">Course</th>
-                                    <th class="px-6 py-4">Status</th>
-                                </tr>
-
-                            </thead>
-
-
-                            <tbody class="divide-y">
-
-                                <tr>
-                                    <td class="px-6 py-4">STU001</td>
-
-                                    <td class="px-6 py-4 font-medium">
-                                        Raj Shrestha
-                                    </td>
-
-                                    <td class="px-6 py-4">
-                                        BSc CSIT
-                                    </td>
-
-                                    <td class="px-6 py-4">
-                                        <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">
-                                            Active
-                                        </span>
-                                    </td>
-                                </tr>
-
-
-                                <tr>
-                                    <td class="px-6 py-4">STU002</td>
-
-                                    <td class="px-6 py-4 font-medium">
-                                        Gaurav Gurung
-                                    </td>
-
-                                    <td class="px-6 py-4">
-                                        BCA
-                                    </td>
-
-                                    <td class="px-6 py-4">
-                                        <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">
-                                            Active
-                                        </span>
-                                    </td>
-                                </tr>
-
-
-                                <tr>
-                                    <td class="px-6 py-4">STU003</td>
-
-                                    <td class="px-6 py-4 font-medium">
-                                        Kundan Karak
-                                    </td>
-
-                                    <td class="px-6 py-4">
-                                        BIM
-                                    </td>
-
-                                    <td class="px-6 py-4">
-                                        <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full">
-                                            Pending
-                                        </span>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-                </div>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
 {% endblock %}
