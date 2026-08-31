@@ -29,70 +29,121 @@
             </div>
 
             <!-- Navigation -->
-            <nav class="p-4 border-b border-blue-800">
+<nav class="p-4 border-b border-blue-800">
 
-               <a href="{% url 'dashboard' %}"
-                   class="block px-4 py-3 rounded-lg mb-2
-                   {% if request.resolver_match.url_name == 'dashboard' %}
-                       bg-blue-800
-                   {% else %}
-                       hover:bg-blue-800
-                   {% endif %}">
-                    <i class="fa fa-home mr-1" style="font-size:20px" aria-hidden="true"></i>
-                    Dashboard
-                </a>
+<a href="{% url 'dashboard' %}"
+   class="block px-4 py-3 rounded-lg mb-2
+   {% if request.resolver_match.url_name == 'dashboard' %}
+       bg-blue-800
+   {% else %}
+       hover:bg-blue-800
+   {% endif %}">
 
-                <a href="{% url 'student_list' %}"
-                   class="block px-4 py-3 rounded-lg mb-2
-                   {% if request.resolver_match.url_name == 'student_list' %}
-                       bg-blue-800
-                   {% else %}
-                       hover:bg-blue-800
-                   {% endif %}">
-                    <i class="fa fa-users mr-1" style="font-size:20px" aria-hidden="true"></i>
-                    Students
-                </a>
-                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-graduation-cap mr-1" style="font-size:20px" aria-hidden="true"></i>
-                    Academics
-                </a>
-                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-calendar-check-o mr-1" style="font-size:20px" aria-hidden="true"></i>
-                    Attendance
-                </a>
-                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-credit-card mr-1" style="font-size:20px" aria-hidden="true"></i>
-                    Fees
-                </a>
-                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-money mr-1" style="font-size:20px" aria-hidden="true"></i>
-                    Payments
-                </a>
-                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-bullhorn mr-1" style="font-size:20px" aria-hidden="true"></i>
-                    Notices
-                </a>
+    <i class="fa fa-home mr-1" style="font-size:20px" aria-hidden="true"></i>
+    Dashboard
 
-                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-bar-chart mr-1" style="font-size:20px" aria-hidden="true"></i>
-                    Reports
-                </a>
+</a>
 
-                </nav>
-                <nav class="p-4">
 
-                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-cog mr-1" style="font-size:20px" aria-hidden="true"></i>
-                    Settings
-                </a>
+<a href="{% url 'student_list' %}"
+   class="block px-4 py-3 rounded-lg mb-2
+   {% if request.resolver_match.url_name == 'student_list' %}
+       bg-blue-800
+   {% else %}
+       hover:bg-blue-800
+   {% endif %}">
 
-                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800">
-                    <i class="fa fa-sign-in mr-1 " style="font-size:20px" aria-hidden="true"></i>
-                    Logout
-                </a>
+    <i class="fa fa-users mr-1" style="font-size:20px" aria-hidden="true"></i>
+    Students
 
-            </nav>
+</a>
 
+
+<a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+
+    <i class="fa fa-graduation-cap mr-1"
+       style="font-size:20px"
+       aria-hidden="true"></i>
+
+    Academics
+
+</a>
+
+
+<a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+
+    <i class="fa fa-calendar-check-o mr-1"
+       style="font-size:20px"
+       aria-hidden="true"></i>
+
+    Attendance
+
+</a>
+
+
+<a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+
+    <i class="fa fa-credit-card mr-1"
+       style="font-size:20px"
+       aria-hidden="true"></i>
+
+    Fees
+
+</a>
+
+
+<a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+
+    <i class="fa fa-money mr-1"
+       style="font-size:20px"
+       aria-hidden="true"></i>
+
+    Payments
+
+</a>
+
+
+<a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+
+    <i class="fa fa-bullhorn mr-1"
+       style="font-size:20px"
+       aria-hidden="true"></i>
+
+    Notices
+
+</a>
+
+    <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+        <i class="fa fa-graduation-cap mr-1" style="font-size:20px" aria-hidden="true"></i>
+        Academics
+    </a>
+
+    <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+        <i class="fa fa-calendar-check-o mr-1" style="font-size:20px" aria-hidden="true"></i>
+        Attendance
+    </a>
+
+    <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+        <i class="fa fa-credit-card mr-1" style="font-size:20px" aria-hidden="true"></i>
+        Fees
+    </a>
+
+    <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+        <i class="fa fa-money mr-1" style="font-size:20px" aria-hidden="true"></i>
+        Payments
+    </a>
+
+    <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+        <i class="fa fa-bullhorn mr-1" style="font-size:20px" aria-hidden="true"></i>
+        Notices
+    </a>
+
+    <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
+        <i class="fa fa-bar-chart mr-1" style="font-size:20px" aria-hidden="true"></i>
+        Reports
+    </a>
+
+</nav>
         </aside>
 
 
@@ -105,7 +156,7 @@
     <!-- Left side -->
     <div class="flex items-center">
         <h2 class="text-xl font-semibold text-slate-800">
-            Dashboard
+             {% block page_title %}Dashboard{% endblock %}
         </h2>
     </div>
 

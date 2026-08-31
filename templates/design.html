@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Student Management System</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -18,63 +20,89 @@
         <!-- Sidebar -->
         <aside class="w-64 bg-blue-900 text-white">
 
-            <!-- Logo / Title -->
             <div class="p-6 border-b border-blue-800">
                 <h1 class="text-xl font-bold">
                     Student Management
                 </h1>
+
                 <p class="text-sm text-blue-200 mt-1">
                     Admin Panel
                 </p>
             </div>
 
-            <!-- Navigation -->
             <nav class="p-4 border-b border-blue-800">
 
                 <a href="#" class="block px-4 py-3 rounded-lg bg-blue-800 mb-2">
-                  <i class="fa fa-home mr-1" style="font-size:20px" aria-hidden="true"></i>  Dashboard
+                    <i class="fa fa-home"
+                        style="font-size:20px; width:24px; text-align:center; margin-right:8px;"
+                        aria-hidden="true"></i>
+                    Dashboard
                 </a>
 
                 <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-users mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    <i class="fa fa-users"
+                        style="font-size:20px; width:24px; text-align:center; margin-right:8px;"
+                        aria-hidden="true"></i>
                     Students
                 </a>
+
                 <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-graduation-cap mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    <i class="fa fa-graduation-cap"
+                        style="font-size:20px; width:24px; text-align:center; margin-right:8px;"
+                        aria-hidden="true"></i>
                     Academics
                 </a>
+
                 <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-calendar-check-o mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    <i class="fa fa-calendar-check-o"
+                        style="font-size:20px; width:24px; text-align:center; margin-right:8px;"
+                        aria-hidden="true"></i>
                     Attendance
                 </a>
+
                 <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-credit-card mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    <i class="fa fa-credit-card"
+                        style="font-size:20px; width:24px; text-align:center; margin-right:8px;"
+                        aria-hidden="true"></i>
                     Fees
                 </a>
+
                 <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-money mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    <i class="fa fa-money"
+                        style="font-size:20px; width:24px; text-align:center; margin-right:8px;"
+                        aria-hidden="true"></i>
                     Payments
                 </a>
+
                 <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-bullhorn mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    <i class="fa fa-bullhorn"
+                        style="font-size:20px; width:24px; text-align:center; margin-right:8px;"
+                        aria-hidden="true"></i>
                     Notices
                 </a>
 
-                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-bar-chart mr-1" style="font-size:20px" aria-hidden="true"></i>
+                <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800">
+                    <i class="fa fa-bar-chart"
+                        style="font-size:20px; width:24px; text-align:center; margin-right:8px;"
+                        aria-hidden="true"></i>
                     Reports
                 </a>
 
-                </nav>
-                <nav class="p-4">
+            </nav>
+
+            <nav class="p-4">
 
                 <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800 mb-2">
-                    <i class="fa fa-cog mr-1" style="font-size:20px" aria-hidden="true"></i>
+                    <i class="fa fa-cog"
+                        style="font-size:20px; width:24px; text-align:center; margin-right:8px;"
+                        aria-hidden="true"></i>
                     Settings
                 </a>
 
                 <a href="#" class="block px-4 py-3 rounded-lg hover:bg-blue-800">
-                    <i class="fa fa-sign-in mr-1 " style="font-size:20px" aria-hidden="true"></i>
+                    <i class="fa fa-sign-in"
+                        style="font-size:20px; width:24px; text-align:center; margin-right:8px;"
+                        aria-hidden="true"></i>
                     Logout
                 </a>
 
@@ -83,83 +111,71 @@
         </aside>
 
 
-        <!-- Main area -->
+        <!-- Main Content -->
         <div class="flex-1">
 
-            <!-- Top navbar -->
-<header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-6">
+            <!-- Header -->
+            <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-6">
 
-    <!-- Left side -->
-    <div class="flex items-center">
-        <h2 class="text-xl font-semibold text-slate-800">
-            Dashboard
-        </h2>
-    </div>
+                <div class="flex items-center">
+                    <h2 class="text-xl font-semibold text-slate-800">
+                        Dashboard
+                    </h2>
+                </div>
 
+                <div class="flex items-center gap-5">
 
-    <!-- Right side -->
-    <div class="flex items-center gap-5">
+                    <div class="relative pl-4 pr-4 py-1 text-sm border border-slate-200 rounded-lg
+                        focus-within:ring-1 focus-within:ring-blue-500">
 
-        <!-- Search -->
-        <div class="relative pl-4 pr-4 py-1 text-sm border border-slate-200 rounded-lg
-            focus-within:ring-1 focus-within:ring-blue-500">
+                        <i class="fa fa-search text-gray-500 text-lg mr-2"
+                            aria-hidden="true"></i>
 
-    <i class="fa fa-search text-gray-500 text-lg" aria-hidden="true"></i>
+                        <input type="text"
+                            placeholder="Search..."
+                            class="w-64 pl-4 pr-4 py-2 text-sm border-none outline-none">
+                    </div>
 
-    <input
-        type="text"
-        placeholder="Search..."
-        class="w-64 pl-4 pr-4 py-2 text-sm border-none outline-none"
-    >
-</div>
+                    <button
+                        class="relative p-2 text-slate-500 hover:text-blue-900 hover:bg-slate-100 rounded-lg">
 
+                        <i class="fa fa-bell" aria-hidden="true"></i>
 
-        <!-- Notification -->
-        <button
-            class="relative p-2 text-slate-500 hover:text-blue-900 hover:bg-slate-100 rounded-lg">
+                        <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
 
-            <i class="fa fa-bell" aria-hidden="true"></i>
+                    </button>
 
-            <!-- Notification badge -->
-            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                    <div class="h-8 w-px bg-slate-200"></div>
 
-        </button>
+                    <div class="flex items-center gap-3">
 
+                        <div class="text-right">
+                            <p class="text-sm font-medium text-slate-800">
+                                Admin
+                            </p>
 
-        <!-- Divider -->
-        <div class="h-8 w-px bg-slate-200"></div>
+                            <p class="text-xs text-slate-500">
+                                Administrator
+                            </p>
+                        </div>
 
+                        <div class="w-9 h-9 rounded-full bg-blue-900 text-white
+                            flex items-center justify-center font-medium">
+                            A
+                        </div>
 
-        <!-- User -->
-        <div class="flex items-center gap-3">
+                    </div>
 
-            <div class="text-right">
-                <p class="text-sm font-medium text-slate-800">
-                    Admin
-                </p>
+                </div>
 
-                <p class="text-xs text-slate-500">
-                    Administrator
-                </p>
-            </div>
-
-            <div class="w-9 h-9 rounded-full bg-blue-900 text-white 
-                        flex items-center justify-center font-medium">
-                A
-            </div>
-
-        </div>
-
-    </div>
-
-</header>
+            </header>
 
 
-            <!-- Page content -->
+            <!-- Content -->
             <main class="p-6">
 
-                <!-- Page heading -->
                 <div class="mb-6">
+
                     <h2 class="text-2xl font-bold text-slate-800">
                         Dashboard Overview
                     </h2>
@@ -167,13 +183,13 @@
                     <p class="text-slate-500 mt-1">
                         Here's what's happening in your university.
                     </p>
+
                 </div>
 
 
-                <!-- Statistics Cards -->
+                <!-- Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                    <!-- Students -->
                     <div class="bg-white p-6 rounded-xl shadow-sm border">
                         <p class="text-sm text-slate-500">
                             Total Students
@@ -189,7 +205,6 @@
                     </div>
 
 
-                    <!-- Teachers -->
                     <div class="bg-white p-6 rounded-xl shadow-sm border">
                         <p class="text-sm text-slate-500">
                             Total Teachers
@@ -205,7 +220,6 @@
                     </div>
 
 
-                    <!-- Courses -->
                     <div class="bg-white p-6 rounded-xl shadow-sm border">
                         <p class="text-sm text-slate-500">
                             Total Courses
@@ -221,7 +235,6 @@
                     </div>
 
 
-                    <!-- Attendance -->
                     <div class="bg-white p-6 rounded-xl shadow-sm border">
                         <p class="text-sm text-slate-500">
                             Attendance
@@ -243,6 +256,7 @@
                 <div class="bg-white rounded-xl shadow-sm border mt-8">
 
                     <div class="p-6 border-b">
+
                         <h3 class="text-lg font-semibold text-slate-800">
                             Recent Students
                         </h3>
@@ -250,6 +264,7 @@
                         <p class="text-sm text-slate-500 mt-1">
                             Recently registered students
                         </p>
+
                     </div>
 
 
@@ -272,7 +287,10 @@
                             <tbody class="divide-y">
 
                                 <tr>
-                                    <td class="px-6 py-4">STU001</td>
+
+                                    <td class="px-6 py-4">
+                                        STU001
+                                    </td>
 
                                     <td class="px-6 py-4 font-medium">
                                         Raj Shrestha
@@ -283,15 +301,20 @@
                                     </td>
 
                                     <td class="px-6 py-4">
-                                        <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">
+                                        <span
+                                            class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">
                                             Active
                                         </span>
                                     </td>
+
                                 </tr>
 
 
                                 <tr>
-                                    <td class="px-6 py-4">STU002</td>
+
+                                    <td class="px-6 py-4">
+                                        STU002
+                                    </td>
 
                                     <td class="px-6 py-4 font-medium">
                                         Gaurav Gurung
@@ -302,15 +325,20 @@
                                     </td>
 
                                     <td class="px-6 py-4">
-                                        <span class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">
+                                        <span
+                                            class="px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">
                                             Active
                                         </span>
                                     </td>
+
                                 </tr>
 
 
                                 <tr>
-                                    <td class="px-6 py-4">STU003</td>
+
+                                    <td class="px-6 py-4">
+                                        STU003
+                                    </td>
 
                                     <td class="px-6 py-4 font-medium">
                                         Kundan Karak
@@ -321,10 +349,12 @@
                                     </td>
 
                                     <td class="px-6 py-4">
-                                        <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full">
+                                        <span
+                                            class="px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full">
                                             Pending
                                         </span>
                                     </td>
+
                                 </tr>
 
                             </tbody>
@@ -340,6 +370,7 @@
         </div>
 
     </div>
+
 </body>
 
 </html>
