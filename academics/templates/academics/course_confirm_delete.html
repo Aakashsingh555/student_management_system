@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+Delete Course
+{% endblock %}
+
+{% block content %}
+
+<div class="max-w-xl mx-auto">
+
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+
+        <h2 class="text-2xl font-bold text-slate-800 mb-3">
+            Delete Course
+        </h2>
+
+        <p class="text-slate-600 mb-6">
+            Are you sure you want to delete
+            <strong>{{ course.name }}</strong>?
+        </p>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <button type="submit"
+                    class="bg-red-600 text-white px-5 py-3 rounded-lg hover:bg-red-700">
+                <i class="fa fa-trash mr-1"></i>
+                Yes, Delete
+            </button>
+
+            <a href="{% url 'course_list' %}"
+               class="bg-slate-200 text-slate-700 px-5 py-3 rounded-lg hover:bg-slate-300 ml-2">
+                Cancel
+            </a>
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}
