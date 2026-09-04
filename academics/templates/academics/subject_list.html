@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+Subjects
+{% endblock %}
+
+{% block content %}
+
+<div class="flex justify-between items-center mb-6">
+    <div>
+        <h2 class="text-2xl font-bold text-slate-800">Subjects</h2>
+        <p class="text-slate-500 mt-1">Manage all subjects</p>
+    </div>
+
+    <a href="{% url 'subject_create' %}"
+       class="bg-blue-600 text-white px-5 py-3 rounded-lg hover:bg-blue-700">
+        <i class="fa fa-plus mr-1"></i>
+        Add Subject
+    </a>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+
+    <table class="w-full">
+        <thead class="bg-slate-50 border-b border-slate-200">
+            <tr>
+                <th class="text-left px-6 py-4 text-slate-600">Course</th>
+                <th class="text-left px-6 py-4 text-slate-600">Name</th>
+                <th class="text-left px-6 py-4 text-slate-600">Code</th>
+                <th class="text-left px-6 py-4 text-slate-600">Semester</th>
+                <th class="text-left px-6 py-4 text-slate-600">Credit Hours</th>
+                <th class="text-left px-6 py-4 text-slate-600">Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for subject in subjects %}
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+
+                <td class="px-6 py-4 font-medium text-slate-800">
+                    {{ subject.course.name }}
+                </td>
+
+                <td class="px-6 py-4 text-slate-600">
+                    {{ subject.name }}
+                </td>
+
+                <td class="px-6 py-4 text-slate-600">
+                    {{ subject.code }}
+                </td>
+
+                <td class="px-6 py-4 text-slate-600">
+                    {{ subject.semester }}
+                </td>
+
+                <td class="px-6 py-4 text-slate-600">
+                    {{ subject.credit_hours }}
+                </td>
+
+                <td class="px-6 py-4">
+
+                    <a href="{% url 'subject_update' subject.id %}"
+                       class="text-blue-600 hover:text-blue-800 mr-4">
+                        <i class="fa fa-edit"></i> Edit
+                    </a>
+
+                    <a href="{% url 'subject_delete' subject.id %}"
+                       class="text-red-600 hover:text-red-800">
+                        <i class="fa fa-trash"></i> Delete
+                    </a>
+
+                </td>
+
+            </tr>
+
+            {% empty %}
+            <tr>
+                <td colspan="6" class="px-6 py-8 text-center text-slate-500">
+                    No subjects found.
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

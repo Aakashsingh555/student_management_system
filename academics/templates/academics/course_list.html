@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+Courses
+{% endblock %}
+
+{% block content %}
+
+<div class="flex justify-between items-center mb-6">
+    <div>
+        <h2 class="text-2xl font-bold text-slate-800">Courses</h2>
+        <p class="text-slate-500 mt-1">Manage all courses</p>
+    </div>
+
+    <a href="{% url 'course_create' %}"
+       class="bg-blue-600 text-white px-5 py-3 rounded-lg hover:bg-blue-700">
+        <i class="fa fa-plus mr-1"></i>
+        Add Course
+    </a>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+
+    <table class="w-full">
+        <thead class="bg-slate-50 border-b border-slate-200">
+            <tr>
+                <th class="text-left px-6 py-4 text-slate-600">Name</th>
+                <th class="text-left px-6 py-4 text-slate-600">Code</th>
+                <th class="text-left px-6 py-4 text-slate-600">Duration</th>
+                <th class="text-left px-6 py-4 text-slate-600">Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for course in courses %}
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+
+                <td class="px-6 py-4 font-medium text-slate-800">
+                    {{ course.name }}
+                </td>
+
+                <td class="px-6 py-4 text-slate-600">
+                    {{ course.code }}
+                </td>
+
+                <td class="px-6 py-4 text-slate-600">
+                    {{ course.duration_years }} years
+                </td>
+
+                <td class="px-6 py-4">
+                    <a href="{% url 'course_update' course.id %}"
+                       class="text-blue-600 hover:text-blue-800 mr-4">
+                        <i class="fa fa-edit"></i> Edit
+                    </a>
+
+                    <a href="{% url 'course_delete' course.id %}"
+                       class="text-red-600 hover:text-red-800">
+                        <i class="fa fa-trash"></i> Delete
+                    </a>
+                </td>
+
+            </tr>
+
+            {% empty %}
+            <tr>
+                <td colspan="4" class="px-6 py-8 text-center text-slate-500">
+                    No courses found.
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}
