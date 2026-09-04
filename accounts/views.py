@@ -32,7 +32,6 @@ def login_view(request):
 
 @login_required
 def dashboard(request):
-<<<<<<< HEAD
     students = Student.objects.all()
     total_students = Student.objects.count()
     total_course = Course.objects.count()
@@ -42,11 +41,9 @@ def dashboard(request):
         'total_students': total_students,
         'total_course' : total_course,
     })
-=======
     return render(request, 'dashboard.html')
 
 
 def logout_view(request):
     logout(request)
     return redirect('login')
->>>>>>> origin/main
