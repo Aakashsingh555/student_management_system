@@ -8,6 +8,7 @@
 
 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
 
+
 <div>
     <h2 class="text-2xl font-bold text-slate-800">
         Students
@@ -21,18 +22,21 @@
 <a href="{% url 'student_create' %}"
    class="inline-flex items-center justify-center gap-2
           bg-blue-900 text-white px-4 py-2.5 rounded-lg
-          hover:bg-blue-800 transition">
+          font-medium hover:bg-blue-800 transition
+          focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
 
     <i class="fa fa-plus" aria-hidden="true"></i>
     Add Student
 
 </a>
 
+
 </div>
 
 <!-- Search / Filter Area -->
 
-<div class="bg-white rounded-xl border shadow-sm p-4 mb-6">
+<div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 mb-6">
+
 
 <div class="flex flex-col md:flex-row gap-4">
 
@@ -48,17 +52,22 @@
             placeholder="Search students..."
             class="w-full pl-11 pr-4 py-2.5
                    border border-slate-200 rounded-lg
-                   outline-none focus:ring-2
-                   focus:ring-blue-500 focus:border-blue-500">
+                   text-slate-700 placeholder-slate-400
+                   outline-none transition
+                   focus:ring-2 focus:ring-blue-500
+                   focus:border-blue-500">
 
     </div>
 
 
     <!-- Course Filter -->
     <select
-        class="px-4 py-2.5 border border-slate-200
-               rounded-lg bg-white text-slate-600
-               outline-none focus:ring-2 focus:ring-blue-500">
+        class="w-full md:w-52 px-4 py-2.5
+               border border-slate-200 rounded-lg
+               bg-white text-slate-600
+               outline-none transition
+               focus:ring-2 focus:ring-blue-500
+               focus:border-blue-500">
 
         <option>All Courses</option>
         <option>BSc CSIT</option>
@@ -74,10 +83,11 @@
 
 <!-- Students Table -->
 
-<div class="bg-white rounded-xl border shadow-sm overflow-hidden">
+<div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+
 
 <!-- Table Header -->
-<div class="p-6 border-b">
+<div class="p-5 sm:p-6 border-b border-slate-200">
 
     <h3 class="text-lg font-semibold text-slate-800">
         Student List
@@ -94,7 +104,7 @@
 
 <div class="overflow-x-auto">
 
-    <table class="w-full text-left">
+    <table class="w-full text-left min-w-[850px]">
 
         <thead class="bg-slate-50 text-sm text-slate-500">
 
@@ -149,7 +159,7 @@
                         <div class="w-9 h-9 rounded-full
                                     bg-blue-100 text-blue-900
                                     flex items-center justify-center
-                                    font-semibold">
+                                    font-semibold flex-shrink-0">
 
                             {{ student.name|first|upper }}
 
@@ -179,9 +189,9 @@
                 <!-- Course -->
                 <td class="px-5 md:px-6 py-4">
 
-                    <span class="px-3 py-1 text-sm
+                    <span class="inline-flex px-3 py-1 text-sm
                                  bg-blue-50 text-blue-700
-                                 rounded-full">
+                                 rounded-full whitespace-nowrap">
 
                         {{ student.course }}
 
@@ -193,16 +203,18 @@
                 <!-- Actions -->
                 <td class="px-5 md:px-6 py-4">
 
-                    <div class="flex items-center justify-center gap-3">
+                    <div class="flex items-center justify-center gap-2">
 
                         <!-- Edit -->
                         <a
                             href="{% url 'student_update' student.id %}"
                             class="inline-flex items-center justify-center
-                                   gap-1.5 px-4 py-2 rounded-lg
+                                   gap-1.5 px-3.5 py-2 rounded-lg
                                    text-blue-700 bg-blue-50
                                    text-sm font-medium
-                                   hover:bg-blue-100 transition">
+                                   hover:bg-blue-100 transition
+                                   focus:outline-none focus:ring-2
+                                   focus:ring-blue-500">
 
                             <i class="fa fa-pencil" aria-hidden="true"></i>
                             Edit
@@ -214,10 +226,12 @@
                         <a
                             href="{% url 'student_delete' student.id %}"
                             class="inline-flex items-center justify-center
-                                   gap-1.5 px-4 py-2 rounded-lg
+                                   gap-1.5 px-3.5 py-2 rounded-lg
                                    text-red-600 bg-red-50
                                    text-sm font-medium
-                                   hover:bg-red-100 transition">
+                                   hover:bg-red-100 transition
+                                   focus:outline-none focus:ring-2
+                                   focus:ring-red-500">
 
                             <i class="fa fa-trash" aria-hidden="true"></i>
                             Delete
@@ -242,7 +256,7 @@
 {% else %}
 
 <!-- Empty State -->
-<div class="p-12 text-center">
+<div class="p-10 sm:p-12 text-center">
 
     <div class="w-14 h-14 mx-auto mb-4 rounded-full
                 bg-slate-100 flex items-center justify-center">
@@ -262,9 +276,10 @@
 
     <a
         href="{% url 'student_create' %}"
-        class="inline-flex items-center gap-2
+        class="inline-flex items-center justify-center gap-2
                bg-blue-900 text-white px-4 py-2.5
-               rounded-lg hover:bg-blue-800 transition">
+               rounded-lg font-medium
+               hover:bg-blue-800 transition">
 
         <i class="fa fa-plus" aria-hidden="true"></i>
         Add First Student
@@ -274,6 +289,7 @@
 </div>
 
 {% endif %}
+
 
 </div>
 
